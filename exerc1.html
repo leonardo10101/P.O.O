@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        class Fruit{
+            #color;
+            #height;
+            #suculent;
+            #name;
+
+            setColor(fruitNewColor) {
+          
+          this.#color = fruitNewColor;
+        }
+
+        setHeight(fruitNewHeight) {
+            
+            this.#height = fruitNewHeight;
+        }
+
+        setSuculent (fruitNewSuculent){
+            
+            this.#suculent =fruitNewSuculent;
+        }
+
+        setName (fruitNewName) {
+            
+            this.#name = fruitNewName;
+        } 
+        getColor(){
+            return this.#color
+        }
+        getSuculent(){
+            return this.#suculent
+        }
+        getHeight(){
+            return this.#height
+        }
+        getName(){
+            return this.#name
+        }
+        }
+
+        var pinneaple = new Fruit ();
+
+        pinneaple.setColor("Yellow")
+        pinneaple.setHeight("Medium")
+        pinneaple.setSuculent("Very Nice :3")
+        pinneaple.setName("Ananas")
+    console.log(pinneaple);
+
+        var apple = new Fruit();
+
+        apple.setColor("Red")
+        apple.setHeight("Small")
+        apple.setSuculent("Very Nice :3")
+        apple.setName("Mazana")
+    console.log(apple);
+
+    document.write(`Name:  ${pinneaple.getName()} <br> Name: ${pinneaple.getSuculent()}`)
+    </script>
+</body>
+</html>
