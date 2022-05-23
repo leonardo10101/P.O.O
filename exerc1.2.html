@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 1.2</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.2</h1>
+    <p>Observe o diagrama de classes abaixo e reproduza-o usando JavaScript:</p>
+    <p><img src="0001.png" alt="Diagrama de classe"></p>
+    <p>Teste a classe.</p>
+
+<script>
+
+class Carro {
+
+    // atributos da classe
+
+    #marca
+    #modelo
+    #cor
+    #ano
+
+setMarca (marca) {
+    this.#marca = marca;
+ }
+setModelo (modelo) { 
+    this.#modelo = modelo;
+ }
+setCor (cor) { 
+    this.#cor = cor;
+}
+setAno (ano) { 
+    this.#ano = ano;
+}
+
+getMarca ( ) { 
+    return this.#marca
+}
+getModelo ( ) { 
+    return this.#modelo
+}
+getCor ( ) { 
+    return this.#cor
+}
+getAno ( ) { 
+    return this.#ano
+}
+
+}
+
+// instância
+let civic = new Carro ();
+
+// Define atributos
+civic.setMarca ('Honda');
+civic.setModelo ('R-Type');
+civic.setCor ('Vermelho');
+civic.setAno ('2020');
+
+console.log('civic: ', civic);
+
+document.write("Dados do carro:" + civic)
+</script>
+
+</body>
+
+</html>

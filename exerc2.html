@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+    <title>Exercício 2.1</title>
+</head>
+
+<body>
+
+    <h1>Exercício 2.1</h1>
+    Crie as classes necessárias:
+    <ul>
+        <li>A classe "Serie" define os atributos, getters e setters comuns para todas as séries;</li>
+        <li>O atributo "titulo" deve ser inserido na instância da classe (construtor);</li>
+        <li>A classe "Comédia" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>A classe "Suspense" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>A classe "SyFy" define atributos, getters e setters comuns para esse tipo de série, herdando a classe
+            "Serie";</li>
+        <li>Crie um objeto para cada tipo de classe "filha" para testar.</li>
+    </ul>
+
+</body>
+
+<script>
+
+    class Serie {
+
+        #titulo
+        #origem
+        #episodios
+        #temporadas
+        #sinopse
+        constructor(titulo, origem, episodios, temporadas, sinopse) { 
+            this.setOrigem(origem); this.setTitulo(titulo); 
+            this.setEpisodios(episodios); this.setTemporadas(temporadas); 
+            this.setSinopse(sinopse) 
+        }
+
+        
+        setTitulo(titulo) { this.#titulo = titulo }
+        setOrigem(origem) { this.#origem = origem }
+        setEpisodios(episodios) { this.#episodios = episodios }
+        setTemporadas(temporadas) { this.#temporadas = temporadas }
+        setSinopse(sinopse) { this.#sinopse = sinopse }
+
+        
+        getTitulo() { return this.#titulo }
+        getOrigem() { return this.#origem }
+        getEpisodios() { return this.#episodios }
+        getTemporadas() { return this.#temporadas }
+        getSinopse() { return this.#sinopse }
+
+    }
+
+    class Comédia extends Serie {
+        #risos
+
+    }
+
+    class Suspense extends Serie {
+        #plottwist
+
+    }
+
+    class SyFy extends Serie {
+        #efeitosEspeciais
+
+        constructor(titulo, origem, episodios, temporadas, sinopse, efeitosEspeciais) {   
+                super(titulo, origem, episodios, temporadas, sinopse)            
+                this.setEfeitosEspeciais(efeitosEspeciais)
+            }
+
+            setEfeitosEspeciais(efeitosEspeciais) { this.#efeitosEspeciais = efeitosEspeciais }
+        
+            setEfeitosEspeciais() { return this.#efeitosEspeciais }
+
+    }
+
+    var mrPickles = new Comédia ('Mr. Pickles', 'Estados Unidos', 
+    '32 episodios', '4 temporadas', 'A série gira em torno da família Goodman, e o relacionamento do filho Tommy, com seu cachorro demoníaco, o Mr. Pickles.')
+
+    var mindHunter = new Suspense ('Mindhunter', 'Estados Unidos', 
+    '19 episodios', '2 temporadas', 'A história acompanha dois agentes do FBI na década de 1970, que entrevistam serial killers na esperança de ajudar a resolver outros assassinatos.".')
+
+    var rickAndMorty = new SyFy ('Rick and Morty', 'Estados Unidos', 
+    '51 episodios', '5 temporadas', 'A série gira em torno das aventuras dos membros da família Smith, que consiste nos pais Jerry e Beth, seus filhos Summer e Morty, e o pai de Beth, chamado Rick Sanchez, que mora com eles como hóspede."', 'Muito bons')
+
+    console.log(mrPickles)
+    console.log(mindHunter)
+    console.log(rickAndMorty)
+
+
+
+
+</script>
+
+</html>
